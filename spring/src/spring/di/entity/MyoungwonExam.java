@@ -1,10 +1,18 @@
 package spring.di.entity;
 
-public class MyoungwonExam implements Exam {
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
+
+public class MyoungwonExam implements Exam {
+	
+	@Value("20")
 	private int kor;
+	@Value("30")
 	private int eng;
+	@Value("40")
 	private int math;
+	@Value("50")
 	private int com;
 	
 	public MyoungwonExam() {
