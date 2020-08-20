@@ -7,16 +7,16 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.3.xsd">
-
-	<context:annotation-config/>
+	
+	<context:component-scan base-package="spring.di.ui, spring.di.entity"/>
 		
 	<!-- Exam  exam = new MyoungwonExam(); -->
 	
 <!-- 	<bean id="exam1" class="spring.di.entity.MyoungwonExam" p:kor="10" p:com="10"/>
 	<bean id="exam2" class="spring.di.entity.MyoungwonExam" p:kor="20" p:com="20"/> -->
 	
-	<!-- <bean id="exam" class="spring.di.entity.MyoungwonExam">
-		<constructor-arg index="0" value="10"/>
+	 <bean id="exam" class="spring.di.entity.MyoungwonExam"/>
+	<!--<constructor-arg index="0" value="10"/>
 		<constructor-arg index="1" value="20"/>
 		<constructor-arg name="math" value="30"/>
 		<constructor-arg name="com" value="40"/>
@@ -29,10 +29,10 @@
 	
 	<!-- ExamConsole console = new GridExamConsole(); -->
 	<!-- <bean id="console" class="spring.di.ui.InlineExamConsole"> -->
-	<bean id="console" class="spring.di.ui.GridExamConsole">
+	<!-- <bean id="console" class="spring.di.ui.GridExamConsole"> -->
 		<!-- console.setExam(exam); -->
 		<!-- <property name="exam" ref="exam"></property> -->
-	</bean>
+	<!-- </bean> -->
 	
 	<!-- <util:list id="exams" list-class="java.util.ArrayList">
 		<bean class="spring.di.entity.MyoungwonExam" p:kor="80" p:com="80" />
